@@ -1,12 +1,22 @@
 # SQL-Sales-Analysis
-🎯 Purpose: Analyze a mock retail dataset to derive key sales metrics, identify top products, customer segments, and regional trends.
+
+🎯 **Purpose**: Analyze a mock retail dataset to derive key sales metrics, identify top products, customer segments, and regional trends.
+
+---
+
+### 🔍 View Full Data
+
+```sql
+SELECT * FROM pizza_sales;
+
 
 
 select * from pizza_sales
 
 -- Check data type 
 
-describe pizza_sales
+DESCRIBE pizza_sales;
+
 
 ![image](https://github.com/user-attachments/assets/a7327314-dd33-4deb-bfcc-b5158c85e984)
 
@@ -76,7 +86,7 @@ ORDER BY
     WEEKDAY(order_date); 
     */
 
-        SELECT 
+ SELECT 
     DAYNAME(order_date) AS order_day, 
     COUNT(DISTINCT order_id) AS total_orders
 FROM 
